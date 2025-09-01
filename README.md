@@ -27,9 +27,17 @@ git clone <repository_url>
 ```sh
 conda env create -f environment.yml
 ```
+If you get an error, try to use the environment-linux.yml file instead.
+```sh
+conda env create -f environment-linux.yml
+```
 4. Activate the new Conda environment:
 ```sh
 conda activate torch
+```
+Or for linux:
+```sh
+conda activate ssrqa
 ```
 
 ## Usage

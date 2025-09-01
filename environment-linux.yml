@@ -1,0 +1,41 @@
+name: ssrqa
+channels:
+  - pytorch
+  - nvidia
+  - conda-forge
+dependencies:
+  - python=3.11
+  # Core PyTorch stack (CUDA 11.8). For CPU-only, see note below.
+  - pytorch=2.0.1
+  - pytorch-cuda=11.8
+  - pytorch-mutex=*=cuda
+  - torchaudio=2.0.2
+  - torchvision=0.15.2
+
+  # Training framework
+  - lightning>=2.1,<2.2
+
+  # Numerics / ML
+  - numpy
+  - scipy
+  - scikit-learn
+  - pandas
+
+  # Audio I/O and processing
+  - librosa
+  - soxr
+  - pysoundfile
+
+  # Utils / plotting / Jupyter
+  - matplotlib
+  - seaborn
+  - tqdm
+  - ipykernel
+
+  - pip
+  - pip:
+      - wandb
+      - einops
+      - einx
+      - vector-quantize-pytorch==1.12.5
+      - torch-ema
